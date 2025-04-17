@@ -118,6 +118,12 @@ class SSPGame:
         self.animate_computer_choice()
 
 
+    def animate_computer_choice(self):
+        symbol = choice(self.choices)
+        self.computer_animation_label.config(text=symbol)
+        self.animation = self.root.after(200, self.animate_computer_choice)
+
+
 
 
 
