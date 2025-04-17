@@ -173,6 +173,25 @@ class SSPGame:
         return "Player" if wins[player] == computer else "Computer"
 
 
+    def show_result_screen(self):
+        self.clear_top()
+        msg = ""
+        winner = self.player_name if self.player_score > self.computer_score else "Computer"
+        if winner == self.player_name:
+            msg = f"Grattis {self.player_name}! Du vann matchen med {self.player_score} vunna 'del-game'."
+        else:
+            msg = f"Tyvärr {self.player_name}, datorn vann med {self.computer_score} vunna 'del-game'."
+
+        tk.Label(self.root, text=msg, bg="#e6f2ff", font=("Arial", 12, "bold")).pack(pady=10)
+
+        btn_frame = tk.Frame(self.root, bg="#e6f2ff")
+        btn_frame.pack(pady=10)
+
+        tk.Button(btn_frame, text="Spara resultat", command=self.save_result).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="Spela en gång till", command=self.init_start_screen).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="Exit", command=self.root.quit).pack(side="left", padx=5)
+
+
 
 
 
