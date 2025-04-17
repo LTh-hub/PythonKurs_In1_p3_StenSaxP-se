@@ -10,3 +10,4 @@
 2025-04-17 20:30:31 >>> Klas 1  -  Computer 0
 2025-04-17 20:34:41 >>> Rulle 1  -  Computer 0
 2025-04-17 20:36:36 >>> Frasse 0  -  Computer 1
+2025-04-17 23:22:10 >>> Klas 2  -  Computer 3
