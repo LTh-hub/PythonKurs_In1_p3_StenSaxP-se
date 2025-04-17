@@ -112,6 +112,12 @@ class SSPGame:
         self.root.after(100, self.start_computer_thinking)
 
 
+    def start_computer_thinking(self):
+        duration = randint(200, 4000)
+        end_time = self.root.after(duration, self.finish_computer_thinking)
+        self.animate_computer_choice()
+
+
 
 
 
