@@ -24,7 +24,7 @@ Programmet startas från terminal:>>>> py .\ssp.py
 Programmet består huvudsakligen av två fönstersidor (Widget's) som spelaren styr programmet från. Första widgeten som kommer upp efter programstart ser ut enligt figur 1. Widgeten i figur 1 är uppdelad i två fält, ett övre där programmet startas och ett undre med uppgifter om spelregler och deltagare i spelprogrammets utveckling.
 
 ![alt text](image-1st-view.png)
-Figure 1
+# Figure 1
 
 För att spela:
 
@@ -33,7 +33,7 @@ Skriv in namnet på spelaren, här är redan namnet "Klas"
 Via dropdown menyn väljes det antal 'del-game' som skall spelas innan en match har avgjorts, se figur 2. I Sten-Sax-Påse är "Först till 5" default värde.
 
 ![alt text](image-2nd-view.png)
-Figure 2
+# Figure 2
 
 Sten-Sax-Påse startas genom ett tryck på Button "Börja Spela".
 
