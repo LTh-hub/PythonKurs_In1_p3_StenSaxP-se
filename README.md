@@ -14,7 +14,7 @@
 
 
 <h2>>> py .\ssp.py  </h2>
-Programmet startas från terminal<bold>:>> py .\ssp.py /></bold>
+Programmet startas från terminal<bold>:>> py .\ssp.py </bold>
 
 Programmet består huvudsakligen av två fönstersidor (Widget's) som spelaren styr programmet från. Första widgeten som kommer upp efter programstart ser ut enligt figur 1. Widgeten i figur 1 är uppdelad i två fält separerade av en horisontell linje, ett övre där programmet startas och ett undre med uppgifter om spelregler och deltagare i spelprogrammets utveckling.
 
