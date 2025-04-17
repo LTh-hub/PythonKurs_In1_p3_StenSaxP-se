@@ -124,6 +124,13 @@ class SSPGame:
         self.animation = self.root.after(200, self.animate_computer_choice)
 
 
+    def finish_computer_thinking(self):
+        if hasattr(self, 'animation'):
+            self.root.after_cancel(self.animation)
+        self.computer_choice = choice(self.choices)
+        self.computer_thinking_label.config(text="Datorn har gjort sitt val")
+        self.computer_animation_label.config(text=self.computer_choice)
+        self.play_button.config(state="normal")
 
 
 
