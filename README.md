@@ -21,10 +21,10 @@
 
 Programmet startas från terminal:>>>> py .\ssp.py 
 
-Programmet består huvudsakligen av två fönstersidor (Widget's) som spelaren styr programmet från. Första widgeten som kommer upp efter programstart ser ut enligt figur 1. Widgeten i figur 1 är uppdelad i två fält, ett övre där programmet startas och ett undre med uppgifter om spelregler och deltagare i spelprogrammets utveckling.
+Programmet består huvudsakligen av två fönstersidor (Widget's) som spelaren styr programmet från. Första widgeten som kommer upp efter programstart ser ut enligt figur 1. Widgeten i figur 1 är uppdelad i två fält separerade av en horisontell linje, ett övre där programmet startas och ett undre med uppgifter om spelregler och deltagare i spelprogrammets utveckling.
 
 ![alt text](image-1st-view.png)
-# Figure 1
+<h3> Figure 1 </h3>
 
 För att spela:
 
@@ -34,6 +34,7 @@ Via dropdown menyn väljes det antal 'del-game' som skall spelas innan en match 
 
 ![alt text](image-2nd-view.png)
 # Figure 2
+<h2> Figure 2 </h2>
 
 Sten-Sax-Påse startas genom ett tryck på Button "Börja Spela".
 
