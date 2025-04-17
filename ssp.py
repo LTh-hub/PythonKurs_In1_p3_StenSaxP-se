@@ -133,6 +133,35 @@ class SSPGame:
         self.play_button.config(state="normal")
 
 
+    def play_round(self):
+        player_choice = self.choice_var.get()
+        if not player_choice:
+            messagebox.showwarning("Välj något", "Du måste välja sten, sax eller påse!")
+            return
+
+        winner = self.determine_winner(player_choice, self.computer_choice)
+        if winner == "Player":
+            self.player_score += 1
+            result = self.player_name
+        elif winner == "Computer":
+            self.computer_score += 1
+            result = "Computer"
+        else:
+            result = "oavgjord"
+
+        self.result_history.append((self.computer_choice, player_choice, result))
+        self.del_game_result_label.config(text=f"Vinnare: {result}")
+        self.score_labels["Computer"].config(text=str(self.computer_score))
+        self.score_labels["Player"].config(text=str(self.player_score))
+
+        if self.player_score >= self.target_score or self.computer_score >= self.target_score:
+            self.show_result_screen()
+        else:
+            self.play_button.config(state="disabled")
+            self.computer_thinking_label.config(text="Datorn funderar")
+            self.root.after(100, self.start_computer_thinking)
+
+
 
 
 
