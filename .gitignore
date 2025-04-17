@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Eventuell virtuell miljö (om du lägger till senare)
+venv/
+env/
+
+# Logg/resultatfiler (kan återskapas)
+ssp_resultat.txt
+
+# OS-specifika filer
+.DS_Store
+Thumbs.db
+
+# Backup/tempfiler
+*.bak
+*.tmp
+
+# Editorinställningar
+.vscode/
