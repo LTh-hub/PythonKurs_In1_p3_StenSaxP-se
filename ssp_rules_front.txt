@@ -1,0 +1,15 @@
+Spelet går ut på att besegra datorn i klassiska Sten-Sax-Påse.
+
+Regler:
+- Sten slår sax (🪨 vinner över ✂️)
+- Sax slår påse (✂️ vinner över 📄)
+- Påse slår sten (📄 vinner över 🪨)
+
+Spelaren väljer ett alternativ och försöker slå datorn.
+
+Först till angivet antal vinster vinner hela matchen.
+
+
+--------------------Programidé:   Robin Kamo / kakashidota
+---------Konstruktion & design:   Lars Thomsson  
+Hjälp med Python programmering:   ChatGPT

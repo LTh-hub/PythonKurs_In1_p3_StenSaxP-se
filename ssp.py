@@ -1,5 +1,5 @@
 # ssp.py
-#   Version 3
+#   Version 4
 #
 #   Pythonprogrammering för AI-utveckling
 #
@@ -27,6 +27,8 @@ import random
 import time
 from datetime import datetime
 import threading
+import os
+
 
 
 
@@ -34,7 +36,7 @@ class StenSaxPåse:
     def __init__(self, root):
         self.root = root
         self.root.title("Sten-Sax-Påse")
-        self.root.geometry("500x500")
+        self.root.geometry("500x600")
         self.player_score = 0
         self.computer_score = 0
         self.match_target = 5
@@ -54,11 +56,23 @@ class StenSaxPåse:
         self.name_entry = tk.Entry(self.root)
         self.name_entry.pack()
 
-        tk.Label(self.root, text="Antal vunna 'del-game' för vinst av 'match'?").pack(pady=10)
+        tk.Label(self.root, text="Ange antal vunna 'del-game' för vinst av 'match'?").pack(pady=10)
         self.match_var = tk.StringVar(value="Först till 5")
-        ttk.Combobox(self.root, textvariable=self.match_var, values=["Först till 3", "Först till 5", "Först till 10"]).pack()
+        ttk.Combobox(self.root, textvariable=self.match_var, values=["Först till 3", "Först till 5", "Först till 10", "Först till 1"]).pack()
 
         tk.Button(self.root, text="Börja spela", command=self.start_game).pack(pady=20)
+
+        # Horisontell mörkgrå linje
+        tk.Frame(self.root, height=2, bd=1, relief=tk.SUNKEN, bg="gray").pack(fill=tk.X, pady=10)
+
+        # Visa regler och information från fil
+        try:
+            with open("ssp_rules_front.txt", "r", encoding="utf-8") as f:
+                rules = f.read()
+            tk.Label(self.root, text="Sten-Sax-Påse", font=("Arial", 14, "bold"), anchor="center").pack()
+            tk.Label(self.root, text=rules, justify=tk.LEFT).pack(pady=10)
+        except FileNotFoundError:
+            tk.Label(self.root, text="Filen 'ssp_rules_front.txt' saknas.").pack(pady=10)
 
 
     def start_game(self):
@@ -93,12 +107,13 @@ class StenSaxPåse:
         self.button_frame = tk.Frame(self.root, bg="#e0f7ff")
         self.button_frame.pack(pady=10)
 
-        self.reveal_button = tk.Button(self.button_frame, text="Jämför era val", state=tk.DISABLED, command=self.reveal_choices)
+        self.reveal_button = tk.Button(self.button_frame, text="Jämför bådas val", state=tk.DISABLED, command=self.reveal_choices)
         self.reveal_button.pack(side=tk.LEFT, padx=10)
 
-        self.play_button = tk.Button(self.button_frame, text="Spela ett 'del-game'", state=tk.DISABLED, command=self.play_round)
+        self.play_button = tk.Button(self.button_frame, text="Spela nytt 'del-game'", state=tk.DISABLED, command=self.play_round)
         self.play_button.pack(side=tk.LEFT, padx=10)
 
+        # Första horisontella gul linje
         tk.Frame(self.root, height=2, bd=1, relief=tk.SUNKEN, bg="gold").pack(fill=tk.X, pady=10)
 
         self.result_label = tk.Label(self.root, text="", bg="#e0f7ff")
@@ -116,19 +131,34 @@ class StenSaxPåse:
         self.target_label = tk.Label(self.root, text=f"För att vinna matchen: Först till {self.match_target}", bg="#e0f7ff")
         self.target_label.pack()
 
+        # Andra horisontella gul linje
+        tk.Frame(self.root, height=2, bd=1, relief=tk.SUNKEN, bg="gold").pack(fill=tk.X, pady=10)
+
+        # Visa spelregler under
+        try:
+            with open("ssp_rules_mid.txt", "r", encoding="utf-8") as f:
+                mid_rules = f.read()
+            tk.Label(self.root, text=mid_rules, justify=tk.LEFT, bg="#e0f7ff").pack(pady=10)
+        except FileNotFoundError:
+            tk.Label(self.root, text="Filen 'ssp_rules_mid.txt' saknas.", bg="#e0f7ff").pack(pady=10)
+
 
     def simulate_computer_thinking(self):
         duration = random.uniform(1, 4)
         start_time = time.time()
-        while time.time() - start_time < duration:
-            symbol = random.choice(["🪨", "✂️", "📄"])
-            self.icon_label.config(text=symbol)
-            time.sleep(0.33)
 
-        self.computer_choice = random.choice(self.choices)
-        self.status_label.config(text="Datorn har gjort sitt val")
-        self.reveal_button.config(state=tk.NORMAL)
-        self.computer_done = True
+        def update_icon():
+            if time.time() - start_time < duration:
+                symbol = random.choice(["🪨", "✂️", "📄"])
+                self.icon_label.config(text=symbol)
+                self.root.after(330, update_icon)
+            else:
+                self.computer_choice = random.choice(self.choices)
+                self.status_label.config(text="Datorn har gjort sitt val")
+                self.reveal_button.config(state=tk.NORMAL)
+                self.computer_done = True
+
+        self.root.after(0, update_icon)
 
 
     def reveal_choices(self):
@@ -206,8 +236,9 @@ class StenSaxPåse:
 
     def save_result(self):
         filename = "ssp_resultat.txt"
-        with open(filename, "a") as file:
-            file.write(f"{datetime.now()}: {self.player_name} {self.player_score} - Computer {self.computer_score}\n")
+        visa_dt = str(datetime.now())
+        with open(filename, "a", encoding="utf-8") as file:
+            file.write(f"{visa_dt[:19]} >>> {self.player_name} {self.player_score}  -  Computer {self.computer_score}\n")
         messagebox.showinfo("Sparat", f"Resultatet sparades i {filename}")
 
 
@@ -217,9 +248,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = StenSaxPåse(root)
     root.mainloop()
-
-
-
 
 
 

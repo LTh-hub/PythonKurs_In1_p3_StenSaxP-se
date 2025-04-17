@@ -1,0 +1,9 @@
+Regler för Sten-Sax-Påse:
+
+🪨  Sten vinner mot ✂️ Sax  
+✂️  Sax vinner mot 📄 Påse  
+📄  Påse vinner mot 🪨 Sten
+
+Om båda spelarna väljer samma sak blir det oavgjort.
+
+Försök slå datorn och nå matchmålet före den!

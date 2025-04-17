@@ -3,3 +3,10 @@
 2025-04-17 18:56:23.431984: Åke 5 - Computer 1
 2025-04-17 18:59:26.599229: Kalle 3 - Computer 2
 2025-04-17 19:10:12.661036: Klas 10 - Computer 9
+2025-04-17 20:11:05.281775: Ebbe 2 - Computer 3
+2025-04-17 20:21:27: Klas 1 - Computer 0
+2025-04-17 20:23:0: Klas 0 - Computer 1
+2025-04-17 20:29:51 >>> Klas 0  -  Computer 1
+2025-04-17 20:30:31 >>> Klas 1  -  Computer 0
+2025-04-17 20:34:41 >>> Rulle 1  -  Computer 0
+2025-04-17 20:36:36 >>> Frasse 0  -  Computer 1
