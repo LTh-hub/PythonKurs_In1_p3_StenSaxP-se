@@ -30,8 +30,10 @@ För att spela:
 
 Skriv in namnet på spelaren, här är redan namnet "Klas"
 
-Via dropdown menyn väljes det antal 'del-game' som skall spelas innan en match har avgjoerts. 
+Via dropdown menyn väljes det antal 'del-game' som skall spelas innan en match har avgjorts, se figur 2. I Sten-Sax-Påse är "Först till 5" default värde.
 
+![alt text](image-2nd-view.png)
+Figure 2
 
-
+Sten-Sax-Påse startas genom ett tryck på Button "Börja Spela".
 
