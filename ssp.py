@@ -192,6 +192,19 @@ class SSPGame:
         tk.Button(btn_frame, text="Exit", command=self.root.quit).pack(side="left", padx=5)
 
 
+    def save_result(self):
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        filename = "ssp_resultat.txt"
+        with open(filename, "a", encoding="utf-8") as f:
+            f.write("=== STEN-SAX-PÅSE MATCH ===\n")
+            f.write(f"Tid: {now}\n")
+            f.write(f"Spelare: {self.player_name}\n")
+            f.write(f"Match till: {self.target_text}\n")
+            for i, (comp, play, res) in enumerate(self.result_history, 1):
+                f.write(f"{i}. Dator: {comp} | {self.player_name}: {play} => Vinnare: {res}\n")
+            f.write(f"Slutresultat - {self.player_name}: {self.player_score}, Computer: {self.computer_score}\n\n")
+        messagebox.showinfo("Resultat sparat", "Matchresultatet har sparats i ssp_resultat.txt")
+
 
 
 
@@ -199,6 +212,7 @@ class SSPGame:
 
 
 if __name__ == "__main__":
+    root = tk.Tk()
     root.mainloop()
 
 
