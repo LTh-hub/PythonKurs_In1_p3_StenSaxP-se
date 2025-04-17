@@ -211,6 +211,12 @@ class SSPGame:
             widget.destroy()
 
 
+    def clear_top(self):
+        for widget in self.root.winfo_children():
+            if isinstance(widget, tk.Label) or isinstance(widget, tk.Button) or isinstance(widget, tk.Frame):
+                widget.destroy()
+
+
 
 
 
