@@ -75,7 +75,7 @@
     <br>
     <h4> Vinst vid färdig spelomgång </h4>
     <br>
-    <br>Efter färdig Match kan resultatet bli som i figur 6, spelaren förlorade 1 poäng. 
+    <br>Efter färdig Match kan resultatet bli som i figur 6, spelaren förlorade med 1 poäng. 
     <br>
 </p>
 
@@ -100,7 +100,7 @@
 
 
 ![alt text](image-8th-pop-up.png)
-<p><h3> Figure 7 </h3></p>
+<p><h3> Figure 8 </h3></p>
 
 
 <p>
@@ -108,11 +108,11 @@
     <br>
     <h4> Spela en gång till? </h4>
     <br>
-    <br>Önskas en spelomgång till? Tryck i så fall på Button "Spela en gång till" - som skickar tillbaka spelaren till position motsvarande start i spelet, figur 1. Är det dags att sluta, tryck då "Exit" vilket teminerar programmet.
+    <br>Önskas en spelomgång till? Tryck i så fall på Button "Spela en gång till", figur 6 - som skickar tillbaka spelaren till position motsvarande start i spelet, figur 1. Är det dags att sluta, tryck då "Exit" vilket teminerar programmet.
     <br>
     <br>
     <br>
-    <br> Lars Thomsson
+    <br> Lars Thomsson med god hjälp från ChatGPT
     <br> 17-april-2025
 </p>
 
