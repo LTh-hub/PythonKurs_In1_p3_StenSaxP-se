@@ -1,8 +1,7 @@
 ﻿# PythonKurs_In1_p3_StenSaxP-se
 #
 # Detta är en inlämningsuppgift i kursen "Pythonprogrammering för AI-utveckling"
-#    Inlämningsuppift 1
-#    Projekt 3  -  Sten-Sax-Påse
+# Inlämningsuppift 1 / Projekt 3  -  Sten-Sax-Påse
 #
 # Skapa en version av spelet sten-sax-påse.
 # · Datorn slumpar vilken av sten, sax eller påse den ska välja.
