@@ -37,13 +37,17 @@
     <br>Medelst Radiobuttons utför spelaren, här Klas, sitt val av Sten-Sax-Påse. Radiobutton är inte disablad under tiden Datorn funderar, utan spelaren kan utföra sitt val samtidigt som datorn utför sitt val.
     <br>
 </p>
-    ![alt text](image-3rd-c-thinking.png)
+
+![alt text](image-3rd-c-thinking.png)
+
 <p>
     <h3> Figure 3 </h3>
     <br>
     <br>
 </p>
-    ![alt text](image-4th-c-ready.png)
+
+![alt text](image-4th-c-ready.png)
+
 <p>
     <h3> Figure 4 </h3>
     <br>
