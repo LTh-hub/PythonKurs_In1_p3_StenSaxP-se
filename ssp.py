@@ -162,6 +162,18 @@ class SSPGame:
             self.root.after(100, self.start_computer_thinking)
 
 
+    def determine_winner(self, player, computer):
+        if player == computer:
+            return "Draw"
+        wins = {
+            "Sten": "Sax",
+            "Sax": "Påse",
+            "Påse": "Sten"
+        }
+        return "Player" if wins[player] == computer else "Computer"
+
+
+
 
 
 
