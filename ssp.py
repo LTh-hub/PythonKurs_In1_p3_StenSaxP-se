@@ -206,6 +206,11 @@ class SSPGame:
         messagebox.showinfo("Resultat sparat", "Matchresultatet har sparats i ssp_resultat.txt")
 
 
+    def clear_root(self):
+        for widget in self.root.winfo_children():
+            widget.destroy()
+
+
 
 
 
@@ -213,6 +218,7 @@ class SSPGame:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    app = SSPGame(root)
     root.mainloop()
 
 
