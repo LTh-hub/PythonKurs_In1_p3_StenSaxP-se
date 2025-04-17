@@ -1,16 +1,16 @@
 # ssp.py
 #
-#   Pythonproframmering för AI-utveckling
+#   Pythonprogrammering för AI-utveckling
 #
-#       Inmlämningsuppgift 1
+#       Inmlämningsuppgift 1    -   22-april-2025
 #
 #   Projekt 3: Sten-sax-påse
-#       Skapa en version av spelet sten-sax-påse.
-#       Datorn slumpar vilken av sten, sax eller påse den ska välja.
-#       Spelaren väljer också sten, sax eller påse.
-#       Datorn och spelaren visar sedan upp sina val samtidigt.
+#       Skapa en version av spelet sten-sax-påse. Datorn
+#       slumpar vilken av sten, sax eller påse den ska välja.
+#       Spelaren väljer också sten, sax eller påse. Datorn
+#       och spelaren visar sedan upp sina val samtidigt.
 #
-#       Reglerna är enligt följande:
+#       Regler enligt följande:
 #           - sten vinner över sax
 #           - sax vinner över påse 
 #           - påse vinner över sten
@@ -221,7 +221,6 @@ class SSPGame:
 
 
 
-
 if __name__ == "__main__":
     root = tk.Tk()
     app = SSPGame(root)
@@ -233,9 +232,9 @@ if __name__ == "__main__":
 
 
 
-
+#
 # git status (frivilligt)
 # git add .
-# git commit  -m"Added new code for mongo"
+# git commit  -m"TxT messages i rubrikhuvudet på GitHub"
 # git push
 
