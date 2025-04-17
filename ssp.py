@@ -73,6 +73,46 @@ class SSPGame:
         self.init_game_screen()
 
 
+    def init_game_screen(self):
+        self.clear_root()
+        self.root.configure(bg="#e6f2ff")
+        self.computer_thinking_label = tk.Label(self.root, text="Datorn funderar", bg="#e6f2ff", font=("Arial", 12))
+        self.computer_thinking_label.pack(pady=5)
+
+        self.computer_animation_label = tk.Label(self.root, text="", font=("Arial", 18), bg="#e6f2ff")
+        self.computer_animation_label.pack()
+
+        self.choice_var = tk.StringVar(value="")
+        choice_frame = tk.Frame(self.root, bg="#e6f2ff")
+        choice_frame.pack(pady=10)
+        for choice in self.choices:
+            tk.Radiobutton(choice_frame, text=choice, variable=self.choice_var, value=choice, bg="#e6f2ff").pack(side="left", padx=5)
+
+        self.play_button = tk.Button(self.root, text="Spela ett 'del-game'", state="disabled", command=self.play_round)
+        self.play_button.pack(pady=10)
+
+        separator = tk.Frame(self.root, bg="darkgoldenrod", height=2)
+        separator.pack(fill="x", pady=5)
+
+        self.del_game_result_label = tk.Label(self.root, text="", bg="#e6f2ff", font=("Arial", 12))
+        self.del_game_result_label.pack()
+
+        score_frame = tk.Frame(self.root, bg="#e6f2ff")
+        score_frame.pack()
+
+        tk.Label(score_frame, text="Computer", bg="#e6f2ff", font=("Arial", 10, "bold")).grid(row=0, column=0)
+        tk.Label(score_frame, text=self.player_name, bg="#e6f2ff", font=("Arial", 10, "bold")).grid(row=0, column=1)
+        self.score_labels["Computer"] = tk.Label(score_frame, text="0", bg="#e6f2ff")
+        self.score_labels["Computer"].grid(row=1, column=0)
+        self.score_labels["Player"] = tk.Label(score_frame, text="0", bg="#e6f2ff")
+        self.score_labels["Player"].grid(row=1, column=1)
+
+        tk.Label(self.root, text=f"För att vinna matchen: {self.target_text}", bg="#e6f2ff").pack(pady=(5, 10))
+
+        self.root.after(100, self.start_computer_thinking)
+
+
+
 
 
 
