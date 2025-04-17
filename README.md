@@ -13,3 +13,9 @@
 
 
 
+
+Programmet startas från terminal:>> py .\ssp.py 
+
+Första widgeten som kommer upp enligt nedan 
+![alt text](image-1st-view.png)
+
