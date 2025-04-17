@@ -20,6 +20,58 @@
 #
 #
 import tkinter as tk
+from tkinter import ttk, messagebox
+from random import choice, randint
+from datetime import datetime
+
+
+class SSPGame:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Sten Sax Påse")
+        self.player_name = ""
+        self.target_score = 5
+        self.player_score = 0
+        self.computer_score = 0
+        self.choices = ["Sten", "Sax", "Påse"]
+        self.computer_choice = ""
+        self.result_history = []
+        self.game_frame = None
+        self.del_game_result_label = None
+        self.score_labels = {}
+        self.target_text = ""
+        self.init_start_screen()
+
+
+    def init_start_screen(self):
+        self.clear_root()
+        frame = tk.Frame(self.root)
+        frame.pack(padx=10, pady=10)
+
+        tk.Label(frame, text="Ange namn på spelare").pack()
+        self.name_entry = tk.Entry(frame)
+        self.name_entry.pack()
+
+        tk.Label(frame, text="Antal vunna 'del-game' för vinst av 'match'?").pack(pady=(10, 0))
+        self.target_var = tk.StringVar(value="Först till 5")
+        dropdown = ttk.Combobox(
+            frame, textvariable=self.target_var, values=["Först till 3", "Först till 5", "Först till 10"],
+            state="readonly")
+        dropdown.pack()
+
+        start_button = tk.Button(frame, text="Börja spela", command=self.start_game)
+        start_button.pack(pady=10)
+
+
+    def start_game(self):
+        self.player_name = self.name_entry.get().strip() or "Spelare"
+        self.target_score = int(self.target_var.get().split()[-1])
+        self.player_score = 0
+        self.computer_score = 0
+        self.result_history.clear()
+        self.target_text = self.target_var.get()
+        self.init_game_screen()
+
 
 
 
