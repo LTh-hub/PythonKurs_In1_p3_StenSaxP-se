@@ -19,7 +19,7 @@
     <br>
 </p>
 
-![alt text](image-1st-view.png)
+![alt text](static/image-1st-view.png)
 
 <p>
     <h3> Figure 1 </h3>
@@ -28,7 +28,7 @@
     <br>
 </p>
 
-![alt text](image-2nd-view.png)
+![alt text](static/image-2nd-view.png)
 
 <p>
     <h3> Figure 2 </h3>
@@ -40,7 +40,7 @@
     <br>
 </p>
 
-![alt text](image-3rd-c-thinking.png)
+![alt text](static/image-3rd-c-thinking.png)
 
 <p>
     <h3> Figure 3 </h3>
@@ -53,7 +53,7 @@
 </p>
 
 
-![alt text](image-4th-c-ready.png)
+![alt text](static/image-4th-c-ready.png)
 
 <p>
     <h3> Figure 4 </h3>
@@ -67,7 +67,7 @@
 
 
 
-![alt text](image-5th-point.png)
+![alt text](static/image-5th-point.png)
 
 <p>
     <h3> Figure 5 </h3>
@@ -81,7 +81,7 @@
 
 
 
-![alt text](image-6th-vinst.png)
+![alt text](static/image-6th-vinst.png)
 <p><h3> Figure 6 </h3></p>
 
 
@@ -95,11 +95,11 @@
 </p>
 
 
-![alt text](image-7th-save2txt_.png)
+![alt text](static/image-7th-save2txt_.png)
 <p><h3> Figure 7 </h3></p><br>
 
 
-![alt text](image-8th-pop-up.png)
+![alt text](static/image-8th-pop-up.png)
 <p><h3> Figure 8 </h3></p>
 
 
